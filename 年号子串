@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+/////10进制转26进制
+/*
+　2019 / 26 = 77　　2019 % 26 = 17=Q
+　　　　77 / 26 = 2　　　77 % 26 = 25=Y
+　　　　2=B
+　　　　最终答案：BYQ
+*/
+void solve(int n)
+{
+  if(!n)
+  {
+    return;
+  }
+  solve(n/26);
+  cout<<(char)(n%26+64);
+}
+int main()
+{
+  // 请在此输入您的代码
+  solve(2019);
+  return 0;
+}
